@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GROVE</title>
+  <link rel="shorcut icon" href="./favicon.png">
+
+  <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- lodash : 스크롤을 제어할 수 있는 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- gsap : 자바스크립트 애니메이션 -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- ScrollMagic : 스크롤에 따라 해당영역 감지 -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+  <!-- topButton : ScrollToPlugin-->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 아이콘이미지 : 내가 만든 css보다 위에다가 선언 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script defer src="./js/jquery-3.1.1.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
+
+  <!-- slick -->
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <script defer src="./js/slick.min.js"></script>
+  <script defer src="./js/slick.js"></script>
+
+  <script defer src="./js/main.js"></script>
+  <script defer src="./js/event.js"></script>
+
+  <!-- 유튜브API js연결 -->
+  <script defer src="./js/youtube.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="header-bg"></div>
+      <h1><a href="index.html"><img src="./images/logo1.png" alt="logo"></a></h1>
+      <nav>
+        <ul class="main-menu">
+          <li>
+            <a href="#">SHOP</a>
+            <ul class="sub-menu">
+              <li><a href="#">NEW ARRIVALS</a></li>
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">OUTWEAR</a></li>
+              <li><a href="#">TOPS</a></li>
+              <li><a href="#">BOTTOMS</a></li>
+              <li><a href="#">DRESSES</a></li>
+              <li><a href="#">ACCESSORIES</a></li>
+              <li><a href="#">SWIMWEAR</a></li>
+              <li><a href="#">GROVE X ESPOIR</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">COLLECTION</a>
+          </li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>
+            <a href="#">CONTACT</a>
+          </li>
+          <li>
+            <a href="#">BOARD</a>
+            <ul class="sub-menu">
+              <li><a href="#">WITH GROVE</a></li>
+              <li><a href="#">Q&A</a></li>
+              <li><a href="#">Review</a></li>
+              <li><a href="#">Notice</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="mo-menu">
+          <li><a href="#">LOGIN</a></li>
+          <li><a href="#">ACCOUNT</a></li>
+        </ul>
+      </nav>
+
+      <ul class="user-menu">
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#">ACCOUNT</a></li>
+        <li><a href="#">CART(0)</a></li>
+        <li><a href="#">SEARCH</a></li>
+      </ul>
+      <ul class="mo-user-menu">
+        <li><a href="#">CART(0)</a></li>
+        <li><a href="#">
+          <span class="material-icons">search</span></a></li>
+        </a></li>
+      </ul>
+    </header>
+
+    <!-- menuToggle btn -->
+    <div class="menu-toggle-btn">
+      <div id="one" class="toggle"></div>
+      <div id="two" class="toggle"></div>
+      <div id="three" class="toggle"></div>
+    </div>
+
+
+    <section id="slide">
+      <h2 class="hidden">슬라이드 영역</h2>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide1.png" alt="slide1"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide2.png" alt="slide2"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide3.png" alt="slide3"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide4.png" alt="slide4"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide5.png" alt="slide5"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide6.png" alt="slide6"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide7.png" alt="slide7"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide8.png" alt="slide8"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide9.png" alt="slide9"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/slide10.png" alt="slide10"></a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+    <section id="collection">
+      <h2 class="text">Collection</h2>
+      <div class="slick">
+        <div>
+          <a href="#"><img src="./images/COLLECTION_1.png" alt="COLLECTION_1"></a>
+          <h4>2021FW CHA JUNG WON x GROVE</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_2.png" alt="COLLECTION_2"></a>
+          <h4>2022 SUMMER CAMPAIGN</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_3.png" alt="COLLECTION_3"></a>
+          <h4>2022FW CHAJUNGWON PARIS LOOKBOOK</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_4.png" alt="COLLECTION_4"></a>
+          <h4>2022WINTER 'FUZZY' LOOKBOOK</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_5.png" alt="COLLECTION_5"></a>
+          <h4>2023 SPRING SUMMER ESSENTIAL LOOKBOOK</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_6.png" alt="COLLECTION_6"></a>
+          <h4>2022 SS COLLECTION</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_7.png" alt="COLLECTION_7"></a>
+          <h4>2022FW LOOKBOOK PART1.</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_8.png" alt="COLLECTION_8"></a>
+          <h4>22FW CHAJUNGWON LOOKBOOK</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_9.png" alt="COLLECTION_9"></a>
+          <h4>2021 SUMMER</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_10.png" alt="COLLECTION_10"></a>
+          <h4>2021SUMMER CAPSULE COLLECTION</h4>
+        </div>
+        <div>
+          <a href="#"><img src="./images/COLLECTION_11.png" alt="COLLECTION_11"></a>
+          <h4>2021F/W COLLECTION</h4>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="best"> 
+      <div class="inner">
+        <h2 class="text">Best</h2>
+        <div class="more-wrap">
+          <a href="#">
+            <img src="./images/BestItem_1.png" alt="BestItem_1">
+            <div class="text-box">
+              <h4>23SS HEIVE DENIM PANTS<br>[2COLOR]</h4>
+              <p>118,000원</p>
+          </div>
+          </a>
+          <a href="#">
+            <img src="./images/BestItem_2.png" alt="BestItem_2">
+            <div class="text-box">
+              <h4>23SS ROIER JUMPER [2COLOR]</h4>
+              <p>198,000원</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./images/BestItem_3.png" alt="BestItem_3">
+            <div class="text-box">
+              <h4>23SS MORROW CARDIGAN [2COLOR]</h4>
+              <p>118,000원</p>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./images/BestItem_4.png" alt="BestItem_4">
+            <div class="text-box">
+              <h4>23SS LINDO CARDIGAN [2COLOR]</h4>
+              <p>148,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_5.png" alt="BestItem_5">
+            <div class="text-box">
+              <h4>23SS TORIA KNIT VEST [NAVY]</h4>
+              <p>118,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_6.png" alt="BestItem_6">
+            <div class="text-box">
+              <h4>23SS HEART PEARL NECKLACE [4COLOR]</h4>
+              <p>68,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_7.png" alt="BestItem_7">
+            <div class="text-box">
+              <h4>23SS HOUND JACKET [BLUE]</h4>
+              <p>193,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_8.png" alt="BestItem_8">
+            <div class="text-box">
+              <h4>23SS GLOISE KNIT [2COLOR]</h4>
+              <p>138,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_9.png" alt="BestItem_9">
+            <div class="text-box">
+              <h4>[CHA JUNG WON x GROVE] 23SU<br>COUCH PANTS [3COLOR]</h4>
+              <p>145,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_10.png" alt="BestItem_10">
+            <div class="text-box">
+              <h4>[CHA JUNG WON x GROVE] 23SU<br>VERA SLEEVELESS [1COLOR]</h4>
+              <p>98,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_11.png" alt="BestItem_11">
+            <div class="text-box">
+              <h4>23SS BELLA SWEAT SHIRTS [3COLOR]</h4>
+              <p>68,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_12.png" alt="BestItem_12">
+            <div class="text-box">
+              <h4>23SS BELLA SWEAT PANTS [3COLOR]</h4>
+              <p>53,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_13.png" alt="BestItem_13">
+            <div class="text-box">
+              <h4>[CHA JUNG WON x GROVE] 23SU<br>GROA CARDIGAN [3COLOR]</h4>
+              <p>158,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_14.png" alt="BestItem_14">
+            <div class="text-box">
+              <h4>23SS NELLA BLOUSE [2COLOR]</h4>
+              <p>138,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_15.png" alt="BestItem_15">
+            <div class="text-box">
+              <h4>23SS HEIVE DENIM BUSTIER [2COLOR]</h4>
+              <p>89,000원</p>
+            </div>
+          </a>
+          <a href="#" class="hide">
+            <img src="./images/BestItem_16.png" alt="BestItem_16">
+            <div class="text-box">
+              <h4>[CHA JUNG WON x GROVE] 23SU<br>RAVI BLOUSE [3COLOR]</h4>
+              <p>93,000원</p>
+            </div>
+          </a>
+        </div>
+
+        <button class="more-btn" onclick="showMore()">more</button>
+      </div>
+    </section>
+
+
+    <section id="espoir" class="scroll-spy">
+      <h2>espoir X GROVE</h2>
+      <div class="espoir_bg">
+        <div class="inner">
+          <img src="./images/group.png" alt="" class="espoir_img">
+          <div class="product">
+            <img src="./images/espoirXGROVE_1.png" alt="espoirXGROVE_1" class="picture1 back-to-position to-right delay-0">
+            <img src="./images/espoirXGROVE_2.png" alt="espoirXGROVE_2" class="picture2 back-to-position to-left delay-1">
+            <img src="./images/espoirXGROVE_3.png" alt="espoirXGROVE_3" class="picture3 back-to-position to-right delay-2">
+            <img src="./images/espoirXGROVE_4.png" alt="espoirXGROVE_4" class="picture4 back-to-position to-right delay-3">
+            <img src="./images/espoirXGROVE_5.png" alt="espoirXGROVE_5" class="picture5 back-to-position to-left delay-4">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="grove">
+      <h2 class="hidden">이미지 영역</h2>
+    </section>
+
+
+    <section id="youtube">
+      <h2 class="hidden">유튜브 영역</h2>
+      <div class="youtube__area">
+        <div id="player"></div>
+      </div>
+      <div class="youtube__cover"></div>
+    </section>
+
+
+    <section id="point" class="scroll-spy">
+      <h2 class="hidden">포인트 영역</h2>
+      <div class="inner">
+        <a href="#" class="point-left">
+          <div>
+            <img src="./images/NEWARRIVALS.png" alt="NEWARRIVALS">
+            <div class="text back-to-position to-bottom delay-1"> <!-- 이미지만 확대되게 -->
+              <p>NEW ARRIVALS</p>
+            </div>
+          </div>
+        </a>
+        <div class="point-box"></div>
+        <a href="#" class="point-right">
+          <div>
+            <img src="./images/WITHGROVE.png" alt="WITHGROVE" class="withgrove">
+            <img src="./images/WITHGROVE_mo.png" alt="WITHGROVE" class="withgrove_mo">
+            <div class="text back-to-position to-bottom delay-2">
+              <p>WITH GROVE</p>
+            </div> 
+          </div>
+        </a>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="inner">
+        <h1><a href="#"><img src="./images/logo2.png" alt="logo"></a></h1>
+        <div class="info">
+          CUSTOMER CENTER - 02-797-0382 <br>
+          CS 10AM-5PM <br>
+          LUNCH 12:30PM-1:30PM <br>
+          HOLIDAY,SAT,SUN OFF <br>
+          반품 주소지 : 서울시 성동구 성수이로 22길 51-1 2층 (그로브,휴먼트) 
+        </div>
+
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">AGREEMENT</a></li>
+            <li><a href="#">PRIVACY</a></li>
+            <li><a href="#">GUIDE</a></li>
+          </ul>
+        </div>
+
+        <div class="social">
+          <a href="#"><img src="./images/instagram.png" alt="instagram logo"></a>
+          <a href="#"><img src="./images/facebook.png" alt="facebook logo"></a>
+          <a href="#"><img src="./images/twitter.png" alt="twitter logo"></a>
+        </div>
+
+        <div>
+          <address>
+            COMPANY - GROVE  OWNER - PARK BO RAM <br>
+            ADDRESS - 04419서울특별시 용산구 독서당로29길 6 (한남동)한남플레이스 <br>
+            BUSINESS LICENSE - 438-81-02274 <br>
+            E-COMMERCE PERMIT - 2021-서울용산-0298호 <br>
+            EMAIL - groveseoul@gmail.com
+          </address>
+        </div>
+
+        <div>
+          <div class="copyright">
+            © Copyright <strong>GROVE</strong> All rights reserved. <br>
+            Site by the131DESIGN
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOP BUTTON -->
+    <div id="to-top">
+      <span class="material-icons">
+        arrow_upward
+      </span>
+    </div>
+  </div>
+</body>
+</html>
